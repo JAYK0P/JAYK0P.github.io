@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAYK0P | Osobní Portfolio</title>
+    <meta name="description" content="Osobní portfolio a prezentace školních i osobních projektů vývojáře JAYK0P.">
+    <!-- Google Fonts - Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Gradients (for visual depth) -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                JAYK<span>0</span>P
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Domů</a>
+                <a href="#about" class="nav-link">O mně</a>
+                <a href="#skills" class="nav-link">Dovednosti</a>
+                <a href="#projects" class="nav-link">Projekty</a>
+                <a href="#contact" class="nav-link">Kontakt</a>
+            </nav>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Otevřít menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-subtitle">Počítačové systémy & Sítě</span>
+                    <h1 class="hero-title">Ahoj, já jsem <span class="gradient-text">JAYK0P</span></h1>
+                    <h2 class="hero-typewriter">
+                        Baví mě <span class="typewriter-text" id="typewriter">HomeLab</span>
+                    </h2>
+                    <p class="hero-description">
+                        Vystudoval jsem počítačové systémy na SPŠ Trutnov. Zajímám se o počítačové sítě, stavbu HomeLabu (Proxmox, IoT) a tvorbu moderního frontendu s důrazem na UX. Rád píšu python skripty pro automatizaci.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">Prozkoumat projekty</a>
+                        <a href="#contact" class="btn btn-secondary">Kontaktovat mě</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-card-wrapper">
+                        <div class="visual-card">
+                            <div class="card-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="card-code">
+                                <span class="code-keyword">const</span> <span class="code-variable">jaykop</span> = {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;education: <span class="code-string">"SPŠ Trutnov"</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;specialty: [<span class="code-string">"Networks"</span>, <span class="code-string">"HomeLab"</span>, <span class="code-string">"UX"</span>],<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;virtualization: <span class="code-string">"Proxmox VE"</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;iot: [<span class="code-string">"Raspberry"</span>, <span class="code-string">"ESP32"</span>]<br>
+                                };
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">O mně</h2>
+                    <p class="section-subtitle">Moje zaměření a IT cesta</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-info card">
+                        <h3>Moje cesta</h3>
+                        <p>
+                            Mám čerstvě za sebou úspěšné studium oboru <strong>Elektronické počítačové systémy</strong> na SPŠ Trutnov (Školní 108). Aktuálně mířím na vysokou školu, kde chci v IT dále pokračovat.
+                        </p>
+                        <p>
+                            Můj záběr v IT je poměrně široký – nejsem jen čistý vývojář. Nejvíce času trávím konfigurací sítí (routery, switche, AP) a správou domácí infrastruktury. Doma provozuji vlastní server s <strong>Proxmox VE</strong>, na kterém hostuji herní servery a chytrou domácnost.
+                        </p>
+                        <p>
+                            Kromě hardwaru a sítí mě baví frontendový design (UX/UI), kdy si užívám tvorbu čistých a přívětivých rozhraní pro koncové uživatele, a psaní menších skriptů v Pythonu, které mi usnadňují rutinní práci.
+                        </p>
+                    </div>
+                    
+                    <div class="about-timeline card">
+                        <h3>Vzdělání & Projekty</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">Příprava</div>
+                                <h4 class="timeline-title">Vysoká škola</h4>
+                                <p class="timeline-desc">Plánované pokračování v IT oboru pro prohloubení teoretických i praktických znalostí.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2022 - 2026</div>
+                                <h4 class="timeline-title">SPŠ Trutnov (Maturita)</h4>
+                                <p class="timeline-desc">Obor Elektronické počítačové systémy. Získání silných základů v síťových technologiích, hardwaru a operačních systémech.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">Průběžně</div>
+                                <h4 class="timeline-title">Domácí HomeLab & Sítě</h4>
+                                <p class="timeline-desc">Stavba a konfigurace lokální sítě, virtualizace přes Proxmox a IoT integrace (Home Assistant).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Dovednosti</h2>
+                    <p class="section-subtitle">S čím pracuji a co mě baví</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-card card">
+                        <div class="skill-icon"><i class="fa-solid fa-network-wired" style="color: #38BDF8;"></i></div>
+                        <h4>Sítě & Hardware</h4>
+                        <p>Konfigurace routerů, switchů a AP. Návrh a příprava domácí síťové infrastruktury.</p>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-icon"><i class="fa-solid fa-server" style="color: #818CF8;"></i></div>
+                        <h4>Virtualizace & HomeLab</h4>
+                        <p>Správa serveru s Proxmox VE, hostování herních serverů a Home Assistant integrace.</p>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-icon"><i class="fa-solid fa-microchip" style="color: #10B981;"></i></div>
+                        <h4>IoT & Mikročipy</h4>
+                        <p>Tvorba projektů na platformách Raspberry Pi, Arduino a čipech řady ESP (ESP8266, ESP32).</p>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-icon"><i class="fa-brands fa-react" style="color: #61DAFB;"></i></div>
+                        <h4>Frontend & UX Design</h4>
+                        <p>Záliba v ladění uživatelského rozhraní (UX) s využitím moderních frameworků (Next.js, Tailwind CSS).</p>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-icon"><i class="fa-brands fa-python" style="color: #3776AB;"></i></div>
+                        <h4>Python Automatizace</h4>
+                        <p>Psaní menších skriptů a nástrojů (i s GUI) pro zjednodušení a automatizaci práce.</p>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-icon"><i class="fa-solid fa-shield-halved" style="color: #F43F5E;"></i></div>
+                        <h4>Kyberbezpečnost</h4>
+                        <p>Zájem o bezpečnost sítí, penetrační testování a ochranu systémů (samostudium).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projekty</h2>
+                    <p class="section-subtitle">Na čem aktivně pracuji</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1: Wivak -->
+                    <div class="project-card card">
+                        <div class="project-image">
+                            <i class="fa-solid fa-mountain-sun"></i>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web / Next.js / Supabase</span>
+                            <h3 class="project-title">Wivak Rentals (wivak.cz)</h3>
+                            <p class="project-description">
+                                Moderní rezervační systém pro ubytování v Krkonoších. Cílí na mezinárodní turisty s plnou lokalizací (CS, EN, DE, NL). Obsahuje administrační rozhraní, chytrý rezervační formulář s honeypot ochranou a automatické e-maily.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Next.js 15</span>
+                                <span class="tag">Supabase</span>
+                                <span class="tag">Tailwind</span>
+                                <span class="tag">TypeScript</span>
+                            </div>
+                            <div class="project-links">
+                                <span class="project-link" style="opacity: 0.6; cursor: default;">
+                                    <i class="fa-solid fa-lock"></i> Private Repository (In Dev)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: HomeLab & IoT -->
+                    <div class="project-card card">
+                        <div class="project-image">
+                            <i class="fa-solid fa-house-laptop"></i>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Infrastruktura / IoT</span>
+                            <h3 class="project-title">Proxmox HomeLab & Smart Home</h3>
+                            <p class="project-description">
+                                Lokální server postavený na Proxmox VE, který slouží jako srdce naší domácnosti. Zajišťuje běh Home Assistantu pro IoT chytrou domácnost, správu Minecraft serveru pro přátele a zálohovací systémy.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Proxmox</span>
+                                <span class="tag">Home Assistant</span>
+                                <span class="tag">IoT</span>
+                                <span class="tag">LXC/VM</span>
+                            </div>
+                            <div class="project-links">
+                                <span class="project-link" style="opacity: 0.8; cursor: default;">
+                                    <i class="fa-solid fa-circle-check" style="color: #10B981;"></i> Aktivně spravováno
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Python Automation -->
+                    <div class="project-card card">
+                        <div class="project-image">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Python / Scripting</span>
+                            <h3 class="project-title">Python Automatizační Skripty</h3>
+                            <p class="project-description">
+                                Soubor drobných nástrojů a skriptů napsaných v Pythonu pro urychlení každodenní práce. Zahrnuje jak čistě konzolové nástroje, tak jednoduchá GUI rozhraní (např. automatizace herních úloh / bot core).
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">GUI</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/JAYK0P" target="_blank" class="project-link">
+                                    <i class="fa-brands fa-github"></i> Profil GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Kontakt</h2>
+                    <p class="section-subtitle">Spojme se</p>
+                </div>
+                
+                <div class="contact-wrapper">
+                    <div class="contact-info-cards">
+                        <a href="mailto:jezec.jaykop@example.com" class="contact-card card">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <h4>E-mail</h4>
+                            <p>Napiš mi zprávu</p>
+                            <span class="contact-link-text">jezec.jaykop@example.com</span>
+                        </a>
+                        <a href="https://github.com/JAYK0P" target="_blank" class="contact-card card">
+                            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                            <h4>GitHub</h4>
+                            <p>Prozkoumej mé repozitáře</p>
+                            <span class="contact-link-text">github.com/JAYK0P</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 JAYK0P. Všechna práva vyhrazena.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/JAYK0P" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
