@@ -26,32 +26,5 @@ Tento web je vytvořen jako čistá, moderní a responzivní jednostránková pr
 *   `LICENSE` – Informace o licenci projektu.
 
 ---
-
-## 🛠️ Jak spustit projekt lokálně
-
-Pro lokální prohlížení webu na svém počítači:
-1.  **Naklonuj repozitář** (pokud ho ještě nemáš stažený):
-    ```bash
-    git clone https://github.com/JAYK0P/JAYK0P.github.io.git
-    ```
-2.  **Otevři soubor `index.html`** přímo ve svém webovém prohlížeči (např. dvojitým kliknutím na soubor, nebo pomocí rozšíření *Live Server* ve VS Code).
-
----
-
-## 📈 Jak nahrát změny na GitHub (Nasazení)
-
-Kdykoliv upravíš kód lokálně a chceš, aby se změny projevily na tvém veřejném webu:
-
-1.  **Přidej změny do gitu:**
-    ```bash
-    git add .
-    ```
-2.  **Vytvoř commit (popis změn):**
-    ```bash
-    git commit -m "Aktualizace portfolia: [stručný popis změn]"
-    ```
-3.  **Odešli kód na GitHub:**
-    ```bash
-    git push origin main
-    ```
-GitHub automaticky spustí build a do 1-2 minut se tvé změny projeví na [https://jayk0p.github.io/](https://jayk0p.github.io/).
+Designed & Developed by Jakub Ježek
+copyright © 2026
