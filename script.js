@@ -9,29 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            
-            // Toggle icon bars to X
-            const icon = navToggle.querySelector('i');
-            if (icon) {
-                if (navMenu.classList.contains('active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-xmark');
-                } else {
-                    icon.classList.remove('fa-xmark');
-                    icon.classList.add('fa-bars');
-                }
-            }
+            navToggle.classList.toggle('active');
         });
 
         // Close menu when clicking on any nav link
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
-                const icon = navToggle.querySelector('i');
-                if (icon) {
-                    icon.classList.remove('fa-xmark');
-                    icon.classList.add('fa-bars');
-                }
+                navToggle.classList.remove('active');
             });
         });
     }
@@ -40,10 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // ACTIVE NAVIGATION LINK ON SCROLL
     // ==========================================================================
     const sections = document.querySelectorAll('section');
-    
+
     const options = {
         root: null,
-        threshold: 0.3, // 30% of the section is visible
+        threshold: 0.3,
         rootMargin: '0px'
     };
 
@@ -71,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     const typewriterNameElement = document.getElementById('typewriter-name');
     if (typewriterNameElement) {
-        const names = ['Jakub Ježek', 'JAYK0P'];
+        const names = ['Jakub', 'JAYK0P'];
         let nameIndex = 0;
         let charIndexName = 0;
         let isDeletingName = false;
@@ -79,20 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function typeName() {
             const currentName = names[nameIndex];
-            
+
             if (isDeletingName) {
                 typewriterNameElement.textContent = currentName.substring(0, charIndexName - 1);
                 charIndexName--;
-                typingSpeedName = 75; // Rychlejší mazání
+                typingSpeedName = 75;
             } else {
                 typewriterNameElement.textContent = currentName.substring(0, charIndexName + 1);
                 charIndexName++;
-                typingSpeedName = 150; // Rychlost psaní
+                typingSpeedName = 150;
             }
 
-            // Dokončení slova
             if (!isDeletingName && charIndexName === currentName.length) {
-                typingSpeedName = 3000; // Pauza na zobrazení celého jména
+                typingSpeedName = 3000;
                 isDeletingName = true;
             } else if (isDeletingName && charIndexName === 0) {
                 isDeletingName = false;
@@ -119,35 +103,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function type() {
             const currentWord = words[wordIndex];
-            
+
             if (isDeleting) {
-                // Remove character
                 typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
                 charIndex--;
-                typingSpeed = 75; // Faster deletion
+                typingSpeed = 75;
             } else {
-                // Add character
                 typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
                 charIndex++;
-                typingSpeed = 150; // Normal typing speed
+                typingSpeed = 150;
             }
 
-            // Word completed
             if (!isDeleting && charIndex === currentWord.length) {
-                // Pause at the end of word
                 typingSpeed = 2000;
                 isDeleting = true;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
-                // Move to next word
                 wordIndex = (wordIndex + 1) % words.length;
-                typingSpeed = 500; // Small pause before next word
+                typingSpeed = 500;
             }
 
             setTimeout(type, typingSpeed);
         }
 
-        // Initialize typewriter
         setTimeout(type, 1000);
+    }
+
+    // ==========================================================================
+    // CERTIFICATE LIGHTBOX MODAL
+    // ==========================================================================
+    const certCards = document.querySelectorAll('.cert-card');
+    const certModal = document.getElementById('certModal');
+    const certModalImg = document.getElementById('certModalImg');
+    const certModalClose = document.getElementById('certModalClose');
+
+    if (certCards.length > 0 && certModal && certModalImg) {
+        certCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const externalLink = card.getAttribute('data-link');
+                const highResImgPath = card.getAttribute('data-cert');
+
+                if (externalLink) {
+                    window.open(externalLink, '_blank');
+                } else if (highResImgPath) {
+                    certModalImg.src = highResImgPath;
+                    certModal.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        const closeModal = () => {
+            certModal.classList.remove('open');
+            document.body.style.overflow = '';
+            setTimeout(() => {
+                certModalImg.src = '';
+            }, 350);
+        };
+
+        if (certModalClose) {
+            certModalClose.addEventListener('click', closeModal);
+        }
+        certModal.addEventListener('click', (e) => {
+            if (e.target === certModal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && certModal.classList.contains('open')) {
+                closeModal();
+            }
+        });
     }
 });
