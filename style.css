@@ -325,13 +325,15 @@ body {
     letter-spacing: -0.03em;
 }
 
-.hero-nick {
-    font-size: 2.2rem;
-    color: var(--text-secondary);
-    font-weight: 500;
-    margin-left: 0.8rem;
+.typewriter-name-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-right: 3px solid var(--accent);
+    padding-right: 8px;
+    animation: blink 0.75s step-end infinite;
     display: inline-block;
-    vertical-align: middle;
 }
 
 .hero-typewriter {
@@ -472,18 +474,10 @@ body {
     margin-bottom: 0;
 }
 
-.about-certs {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--card-border);
-}
-
-.about-certs h4 {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
+.about-left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .cert-list {
@@ -829,10 +823,7 @@ body {
         font-size: 3rem;
     }
     
-    .hero-nick {
-        font-size: 1.8rem;
-        margin-left: 0.5rem;
-    }
+
     
     .hero-typewriter {
         font-size: 1.8rem;
@@ -883,12 +874,7 @@ body {
         font-size: 2.5rem;
     }
     
-    .hero-nick {
-        font-size: 1.5rem;
-        display: block;
-        margin-left: 0;
-        margin-top: 0.5rem;
-    }
+
     
     .hero-cta {
         flex-direction: column;

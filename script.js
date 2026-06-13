@@ -67,7 +67,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================================================
-    // TYPEWRITER EFFECT
+    // TYPEWRITER EFFECT FOR NAME
+    // ==========================================================================
+    const typewriterNameElement = document.getElementById('typewriter-name');
+    if (typewriterNameElement) {
+        const names = ['Jakub Ježek', 'JAYK0P'];
+        let nameIndex = 0;
+        let charIndexName = 0;
+        let isDeletingName = false;
+        let typingSpeedName = 150;
+
+        function typeName() {
+            const currentName = names[nameIndex];
+            
+            if (isDeletingName) {
+                typewriterNameElement.textContent = currentName.substring(0, charIndexName - 1);
+                charIndexName--;
+                typingSpeedName = 75; // Rychlejší mazání
+            } else {
+                typewriterNameElement.textContent = currentName.substring(0, charIndexName + 1);
+                charIndexName++;
+                typingSpeedName = 150; // Rychlost psaní
+            }
+
+            // Dokončení slova
+            if (!isDeletingName && charIndexName === currentName.length) {
+                typingSpeedName = 3000; // Pauza na zobrazení celého jména
+                isDeletingName = true;
+            } else if (isDeletingName && charIndexName === 0) {
+                isDeletingName = false;
+                nameIndex = (nameIndex + 1) % names.length;
+                typingSpeedName = 500;
+            }
+
+            setTimeout(typeName, typingSpeedName);
+        }
+
+        setTimeout(typeName, 1000);
+    }
+
+    // ==========================================================================
+    // TYPEWRITER EFFECT FOR SKILLS
     // ==========================================================================
     const typewriterElement = document.getElementById('typewriter');
     if (typewriterElement) {
